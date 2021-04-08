@@ -3,13 +3,14 @@ public class Kstack {
 	
 	int arr[],n, k , free, top[], next[];
 	
-	public Kstack(int n1,int k1) {
+	public Kstack(int k1,int n1) {
 		n=n1;
 		k=k1;
 		next=new int[n];
 		top=new int[n];
 		arr=new int[n];
-		for (int i=0;i<k;i++) top[i]=-1;
+		for (int i=0;i<k;i++) 
+			top[i]=-1;
 		free=0;
 		for(int i=0;i<n;i++)
 			next[i]=i+1;
@@ -51,7 +52,7 @@ public class Kstack {
 	
 
 	public static void main(String[] args) {
-		Kstack k=new Kstack(3, 10);
+		Kstack k=new Kstack(4, 10);
 		k.push(14, 2);
 		k.push(12, 1);
 		k.push(20, 0);
